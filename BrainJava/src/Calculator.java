@@ -27,7 +27,7 @@ public class Calculator {
 		int num1 , num2, num3;
 		
 		System.out.println("세개 숫자 입력");
-		Scanner scan = new Scanner(System.in); // scanf
+		Scanner scan = new Scanner(System.in); // scanf("%d", &num1);
 		num1 = scan.nextInt();
 		num2 = scan.nextInt();
 		num3 = scan.nextInt();
