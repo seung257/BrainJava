@@ -28,7 +28,7 @@ class JDBCExample2 {
              stmt = conn.createStatement();
              
              // DML SQL쿼리 실행후 결과를 저장
-             rs = stmt.executeQuery("select jumincd,pname,gender, age from person");
+             rs = stmt.executeQuery("selcet jumincd,pname,gender, age from person");
              
              System.out.println("주민번호        이름        성별        나이");
              
