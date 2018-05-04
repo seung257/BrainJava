@@ -23,7 +23,7 @@ class JDBCExample2 {
              conn = DriverManager.getConnection( 
                 "jdbc:mysql://localhost:3306/mysql", "root", "12345"); 
              System.out.println("데이터베이스에 접속했습니다.");
-             
+              
              //커넥션 객체가 Statement 객체를 생성
              stmt = conn.createStatement();
              
