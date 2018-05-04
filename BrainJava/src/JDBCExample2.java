@@ -41,7 +41,7 @@ class JDBCExample2 {
              
              System.out.println(jumincd + "-----" + pname + "-----" + gender + "-----" + age);
              } 
- 
+
             //4단계 : DB연결을 종료한다.
              conn.close();  
          } 
