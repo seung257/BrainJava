@@ -40,7 +40,8 @@ class JDBCExample2 {
              int    age     = rs.getInt(4);    //rs.getInt("age");
              
              System.out.println(jumincd + "-----" + pname + "-----" + gender + "-----" + age);
-             }
+             } 
+
             //4단계 : DB연결을 종료한다.
              conn.close();  
          } 
