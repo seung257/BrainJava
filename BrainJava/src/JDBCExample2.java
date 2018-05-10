@@ -17,6 +17,11 @@ class JDBCExample2 {
     	 
          // try ~ catch 문에서 DB연결중에 예외가 발생하는지를 검사.
     	 try {
+    		 String jumincd = null;
+    		 String pname = null;
+    		 String gender = null;
+    		 int age = 0;
+    		 
         	 // 2단계 : JDBC드라이버를 로드한다.
              Class.forName("com.mysql.jdbc.Driver");
              // 3단계 : 드라이버매니져 클래스는 DB를 연결한다.
@@ -28,22 +33,26 @@ class JDBCExample2 {
              stmt = conn.createStatement();
              
              // DML SQL쿼리 실행후 결과를 저장
-             rs = stmt.executeQuery("selcet jumincd,pname,gender, age from person");
+             rs = stmt.executeQuery("selcet jumincd,pname,gender, age " + 
+             		"from person" + 
+             		"where gender = 'm'");
              
              System.out.println("주민번호        이름        성별        나이");
              
              while(rs.next()) {
              
-             String jumincd = rs.getString(1); //rs.getString("jumincd");
-             String pname   = rs.getString(2); //rs.getString("pname");
-             String gender  = rs.getString(3); //rs.getString("gender");
-             int    age     = rs.getInt(4);    //rs.getInt("age");
+             jumincd = rs.getString(1); //rs.getString("jumincd");
+             pname   = rs.getString(2); //rs.getString("pname");
+             gender  = rs.getString(3); //rs.getString("gender");
+             age     = rs.getInt(4);    //rs.getInt("age");
              
              System.out.println(jumincd + "-----" + pname + "-----" + gender + "-----" + age);
              } 
  
             //4단계 : DB연결을 종료한다.
-             conn.close();  
+             conn.close();
+             System.out.println(jumincd + "-----" + pname + "-----" + gender + "-----" + age);
+            
          } 
          catch (ClassNotFoundException cnfe) { 
              System.out.println("해당 클래스를 찾을 수 없습니다." +  

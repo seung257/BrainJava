@@ -50,7 +50,7 @@ class JDBC_Person {
 	
     public static void main(String args[]) {
 
-    	Person[] persons = new Person[5]; //  배열객체 
+    	Person[] persons = new Person[6]; //  배열객체 
   
     	for(int i=0; i<persons.length; i++) {
     		persons[i] = new Person();  // 생성자 호출하여 배열레퍼런스 대입
@@ -145,6 +145,11 @@ class JDBC_Person {
            
             //System.out.println(jumincd + "---" + pname + "-------" + gender + "-------" + age);
         }
+    	catch (ArrayIndexOutOfBoundsException arye) {
+            System.out.println("배열객체 용량초과 index:" + 
+            					arye.getMessage());
+        }
+    	
         catch (ClassNotFoundException cnfe) {
             System.out.println("해당 클래스를 찾을 수 없습니다." + 
                                cnfe.getMessage());

@@ -55,7 +55,7 @@ class JDBC_Person_ArrayList {
     	ArrayList<Person> listPerson = new ArrayList<Person>();
     	
     	   	
-    	//////////////    JDBC 연결시작  //////////////   
+    	//////////////    JDBC 연결시작     //////////////   
     	// 1단계: DB 연결을 위한 커넥션 인터페이스 
     	Connection conn = null;
     	// Statement 인터페이스 - SQL 실행.
@@ -68,7 +68,7 @@ class JDBC_Person_ArrayList {
 //    		String jumincd = null;
 //    		String pname   = null;
 //    		String gender  = null;
-    		int age = 0;
+//    		int age = 0;
         	// 2단계: JDBC드라이버를 로드한다.
             Class.forName("com.mysql.jdbc.Driver");
             // 3단계: 드라이버매니져 클래스는 getConnection메소드로 DB를 연결한다.
@@ -96,7 +96,7 @@ class JDBC_Person_ArrayList {
             }
             // 4단계: DB연결을 종료한다.
             conn.close();
-            System.out.println("============================================================");
+            System.out.println("=========================================================");
             
             for(int i = 0; i < listPerson.size(); i++) {
             	System.out.print(listPerson.get(i).getJumincd() + "    "); 
@@ -121,3 +121,4 @@ class JDBC_Person_ArrayList {
    	
     }
 }
+
